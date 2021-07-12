@@ -14,7 +14,7 @@ Projeto desenvolvido referente ao desafio proposto pela Kinghost
 -Para conseguir executar o projeto, voce pode baixar o conteudo .zip e extrair na sua maquina, após extrair com um duplo clique no arquivo "index.html" provavelmente ja irá carregar em seu navegador, caso não abra: clique com o botão direito do mouse e tente opções como "abrir com outro aplicativo" e selecione seu navegador.
 
 -Ou pode clonar esse repositorio com o comando: 
-git clone https://github.com/wesleibl/desafioWes.git
+git clone https://github.com/wesleibl/marvel2.0.git
 
 ## Como funciona a conexao a API
 
