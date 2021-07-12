@@ -6,9 +6,7 @@ const cironM= 'https://gateway.marvel.com/v1/public/characters/1009368/comics?da
 async function getContent() {
     try {
         const response = await fetch(ironM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[0].name)
         let iron = data.data.results[0]
         return iron
     }catch (error) {
@@ -23,21 +21,16 @@ async function showCharacter() {
         let imgiron = `${iron.thumbnail.path}${'.'}${iron.thumbnail.extension}`
         document.getElementById('imgiron').src = (imgiron)
         document.getElementById('desciron').innerHTML = iron.description
-
-        //console.log(iron)
     }catch (error) {
         console.error(error)
     }
 };
 showCharacter()
 
-
 async function getComics1() {
     try{
         const response = await fetch(cironM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[0])
         let comics = data.data.results[0]
         return comics
     }catch (error){
@@ -52,7 +45,6 @@ async function showComics1(){
         let comicsImg = `${comics.thumbnail.path}${'.'}${comics.thumbnail.extension}`
         document.getElementById('imgC1').src = (comicsImg)
         document.getElementById('description1').innerHTML = comics.description
-        //console.log(comics)
     }catch (error) {
         console.error(error)
     }
@@ -62,9 +54,7 @@ showComics1();
 async function getComics2() {
     try{
         const response = await fetch(cironM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[1])
         let comics = data.data.results[1]
         return comics
     }catch (error){
@@ -79,7 +69,6 @@ async function showComics2(){
         let comicsImg = `${comics.thumbnail.path}${'.'}${comics.thumbnail.extension}`
         document.getElementById('imgC2').src = (comicsImg)
         document.getElementById('description2').innerHTML = comics.description
-        //console.log(comics)
     }catch (error) {
         console.error(error)
     }
