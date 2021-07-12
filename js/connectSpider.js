@@ -6,9 +6,7 @@ const cSpiderM= 'https://gateway.marvel.com/v1/public/characters/1009610/comics?
 async function getContent() {
     try {
         const response = await fetch(spiderM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[0].name)
         let spider = data.data.results[0]
         return spider
     }catch (error) {
@@ -23,8 +21,6 @@ async function showCharacter() {
         let imgSpider = `${spider.thumbnail.path}${'.'}${spider.thumbnail.extension}`
         document.getElementById('imgSpider').src = (imgSpider)
         document.getElementById('descSpider').innerHTML = spider.description
-
-        //console.log(spider)
     }catch (error) {
         console.error(error)
     }
@@ -35,9 +31,7 @@ showCharacter()
 async function getComics1() {
     try{
         const response = await fetch(cSpiderM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[0])
         let comics = data.data.results[0]
         return comics
     }catch (error){
@@ -52,7 +46,6 @@ async function showComics1(){
         let comicsImg = `${comics.thumbnail.path}${'.'}${comics.thumbnail.extension}`
         document.getElementById('imgC1').src = (comicsImg)
         document.getElementById('description1').innerHTML = comics.description
-        //console.log(comics)
     }catch (error) {
         console.error(error)
     }
@@ -62,9 +55,7 @@ showComics1();
 async function getComics2() {
     try{
         const response = await fetch(cSpiderM)
-        //console.log(response)
         const data = await response.json()
-        //console.log(data.data.results[1])
         let comics = data.data.results[1]
         return comics
     }catch (error){
@@ -79,7 +70,6 @@ async function showComics2(){
         let comicsImg = `${comics.thumbnail.path}${'.'}${comics.thumbnail.extension}`
         document.getElementById('imgC2').src = (comicsImg)
         document.getElementById('description2').innerHTML = comics.description
-        //console.log(comics)
     }catch (error) {
         console.error(error)
     }
