@@ -1,4 +1,4 @@
-# marvel API 2.0
+# Marvel API 2.0
 Projeto desenvolvido referente ao desafio proposto pela Kinghost
 
 ## Qual objetivo do projeto?
